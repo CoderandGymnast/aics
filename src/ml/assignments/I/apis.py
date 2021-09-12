@@ -10,3 +10,16 @@ def calculate_entropy(input):
         P = v/original_size
         ans -= P*log2(P)
     return ans
+
+
+def calculate_information_gain(original, splitted):
+    original_size = len(original)
+
+    splitted_entropy = 0
+    for s in splitted:
+        splitted_entropy += calculate_entropy(s)*len(s)/original_size
+
+    original_entropy = calculate_entropy(original)
+
+    ans = original_entropy-splitted_entropy
+    return ans
