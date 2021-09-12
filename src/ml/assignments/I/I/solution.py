@@ -22,3 +22,10 @@ def a():
 
     print(f"Outlook information gain: {outlook_information_gain}")
     print(f"Humidty information gain: {humidity_information_gain}")
+
+def b():
+    outlook_gain_ratio = calculate_gain_ratio(data[0], outlooks)
+    humidity_gain_ratio = calculate_gain_ratio(data[2], humidities)
+
+    print(f"Outlook gain ratio: {outlook_gain_ratio}")
+    print(f"Humidity gain ratio: {humidity_gain_ratio}")
