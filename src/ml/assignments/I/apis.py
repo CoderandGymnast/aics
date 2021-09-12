@@ -23,3 +23,17 @@ def calculate_information_gain(original, splitted):
 
     ans = original_entropy-splitted_entropy
     return ans
+
+
+def calculate_gain_ratio(original, splitted):
+    information_gain = calculate_information_gain(original, splitted)
+
+    # This splitted entropy is different from the one of Calculate Information Gain API.
+    original_size = len(original)
+    splitted_entropy = 0
+    for s in splitted:
+        P = len(s)/original_size
+        splitted_entropy -= P*log2(P)
+
+    ans = information_gain/splitted_entropy
+    return ans
