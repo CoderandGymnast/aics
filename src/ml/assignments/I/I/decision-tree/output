@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<Humidity &le; 82.5<br/>gini = 0.459<br/>samples = 14<br/>value = [5, 9]<br/>class = Play>, fillcolor="#a7d3f3"] ;
+1 [label=<Outlook &le; 1.5<br/>gini = 0.346<br/>samples = 9<br/>value = [2, 7]<br/>class = Play>, fillcolor="#72b9ec"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.0<br/>samples = 5<br/>value = [0, 5]<br/>class = Play>, fillcolor="#399de5"] ;
+1 -> 2 ;
+3 [label=<Windy &le; 0.5<br/>gini = 0.5<br/>samples = 4<br/>value = [2, 2]<br/>class = Don't Play>, fillcolor="#ffffff"] ;
+1 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 2]<br/>class = Play>, fillcolor="#399de5"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [2, 0]<br/>class = Don't Play>, fillcolor="#e58139"] ;
+3 -> 5 ;
+6 [label=<Outlook &le; 0.5<br/>gini = 0.48<br/>samples = 5<br/>value = [3, 2]<br/>class = Don't Play>, fillcolor="#f6d5bd"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label=<gini = 0.0<br/>samples = 3<br/>value = [3, 0]<br/>class = Don't Play>, fillcolor="#e58139"] ;
+6 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 2]<br/>class = Play>, fillcolor="#399de5"] ;
+6 -> 8 ;
+}
