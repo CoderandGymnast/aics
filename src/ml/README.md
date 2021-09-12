@@ -1,5 +1,8 @@
 # Notes: 
 
+## I. References: 
+- [1](https://github.com/adziorny/CIS419/blob/master/Assignment1/hw1.pdf)
+
 ## II. Unittests: 
 - In **test.bat**, replace: 
     - **[assignment name]** with the desired **assignment name**. 
