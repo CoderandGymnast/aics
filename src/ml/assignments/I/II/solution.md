@@ -1,0 +1,1 @@
+Each node represents more than one attribute and each branch contains 2 conditions.
