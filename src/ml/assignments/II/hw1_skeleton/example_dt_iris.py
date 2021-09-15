@@ -19,6 +19,10 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
+plt.rcParams["font.family"]="arial"
+#plt.rcParams["font.weight"]=""
+#plt.rcParams["font.style"]=""
+plt.rcParams["font.size"]="9"
 
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
