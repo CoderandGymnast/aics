@@ -37,7 +37,7 @@ class LinearRegression:
         self.JHist = []
         for i in range(self.n_iter):
             self.JHist.append( (self.computeCost(X, y, theta), theta) )
-            # print(f"Iteration: {i+1}, Cost: {self.JHist[i][0]}, Theta: {theta}")
+            print(f"Iteration: {i+1}, Cost: {self.JHist[i][0]}, Theta: {theta}")
             # TODO:  add update equation here
             h=np.dot(X,theta) 
             steps=0.01*(1/n)*X.T*np.subtract(h,y)
