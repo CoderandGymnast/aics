@@ -5,6 +5,10 @@
 import numpy as np
 from numpy import linalg as LA
 import matplotlib.pyplot as plt
+plt.rcParams["font.family"]="arial"
+#plt.rcParams["font.weight"]=""
+#plt.rcParams["font.style"]=""
+plt.rcParams["font.size"]="9"
 
 
 class LinearRegression:
@@ -31,11 +35,13 @@ class LinearRegression:
         '''
         n,d = X.shape
         self.JHist = []
-        for i in xrange(self.n_iter):
+        for i in range(self.n_iter):
             self.JHist.append( (self.computeCost(X, y, theta), theta) )
-            print "Iteration: ", i+1, " Cost: ", self.JHist[i][0], " Theta: ", theta
+            # print(f"Iteration: {i+1}, Cost: {self.JHist[i][0]}, Theta: {theta}")
             # TODO:  add update equation here
-
+            h=np.dot(X,theta) 
+            steps=0.01*(1/n)*X.T*np.subtract(h,y)
+            theta=np.subtract(theta,steps)
         return theta
     
 
@@ -51,6 +57,10 @@ class LinearRegression:
               ** make certain you don't return a matrix with just one value! **
         '''
         # TODO: add objective (cost) equation here
+        n,d=X.shape
+        h=np.dot(X,theta) 
+        J=1/(2*n)*sum(np.power(np.subtract(h,y),2))
+        return J
     
 
     def fit(self, X, y):
@@ -62,7 +72,8 @@ class LinearRegression:
         '''
         n = len(y)
         n,d = X.shape
-        if self.theta==None:
+        if self.theta is None:
+            print("[NOTI]: init weights (thetas)")
             self.theta = np.matrix(np.zeros((d,1)))
         self.theta = self.gradientDescent(X,y,self.theta)    
 

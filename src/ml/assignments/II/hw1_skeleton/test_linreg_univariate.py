@@ -13,6 +13,10 @@ from numpy.linalg import *
 
 # Matplotlib provides matlab like plotting tools in python
 import matplotlib.pyplot as plt
+plt.rcParams["font.family"]="arial"
+#plt.rcParams["font.weight"]=""
+#plt.rcParams["font.style"]=""
+plt.rcParams["font.size"]="9"
 
 # our linear regression class
 from linreg import LinearRegression
@@ -53,10 +57,8 @@ def plotRegLine1D( lr_model, X, y):
         lr_model - linear regression trained model
     '''
     plotData1D(X[:,1], y, to_block =False)
-    plt.hold(True)
     plt.plot(X[:,1],X*lr_model.theta,'b-', label='Regression Line')
     plt.legend(loc='lower right')
-    plt.hold(False)
     plt.show()
 
 
@@ -158,7 +160,7 @@ if __name__ == "__main__":
 
     # Instantiate objects
     lr_model = LinearRegression(init_theta = init_theta, alpha = alpha, n_iter = n_iter)
-    plotData1D(X[:,1],y)
+    # plotData1D(X[:,1],y)
     lr_model.fit(X,y)
     plotRegLine1D(lr_model,X, y)
 
@@ -169,6 +171,6 @@ if __name__ == "__main__":
 
     # Compute the closed form solution in one line of code
     theta_closed_form = 0  # TODO:  replace "0" with closed form solution
-    print "theta_closed_form: ", theta_closed_form
+    print(f"theta_closed_form: {theta_closed_form}")
     
 
