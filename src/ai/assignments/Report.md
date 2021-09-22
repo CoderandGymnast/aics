@@ -179,6 +179,100 @@ Don't need to track agent's orientation.
 - Robot is stuck. 
 - Robot is destroyed by some villain.
 
+# 4.
+## 1. 
+### a. 
+STATES: 
+- Any combination of red and blue of the grid.
+
+INITIAL STATE: 
+- All blue
+
+ACTIONS: 
+- Change color of a square. 
+
+TRANSITION MODEL: 
+- Map a combination and a color change to resulting a new combination.
+
+GOAL STATES: 
+- Each sub-square to be all one color but neighboring sub-squares to be different colors.
+
+ACTION COST: 
+- 1.
+
+### b. 
+- 2^81.
+
+## 2. 
+### a. 
+STATES: 
+- Any combination of red and blue of the grid.
+
+INITIAL STATE: 
+- All blue
+
+ACTIONS: 
+- Change color of a square. 
+- Color each square only once
+
+TRANSITION MODEL: 
+- Map a combination and a color change to resulting a new combination.
+
+GOAL STATES: 
+- Each sub-square to be all one color but neighboring sub-squares to be different colors.
+
+ACTION COST: 
+- 1.
+
+### b. 
+- 2^81.
+
+### c. 
+(?)
+
+### d. 
+(?)
+
+## 3. 
+### a. 
+STATES: 
+- Any combination of red and blue of the grid.
+
+INITIAL STATE: 
+- Any. 
+
+ACTIONS: 
+- Color all squares on uniformly colored sub-squares
+
+TRANSITION MODEL: 
+- Map a combination and a color change to resulting a new combination.
+
+GOAL STATES: 
+- All sub-squares are uniformly colored. 
+
+ACTION COST: 
+- 1.
+
+### b. 
+2^9 (Each sub-square can be uniformed colored or not). 
+
+## 4. 
+- Only 2 goals.
+(?)
+
+## 5. 
+(?)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
