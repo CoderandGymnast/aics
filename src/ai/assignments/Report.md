@@ -77,7 +77,7 @@ STATES:
 - Position of remaining containers on the ship. 
 - For each columns, must unload containers top down.
 
-INITIAL STAE: 
+INITIAL STATE: 
 - 13x13x5 containers.
 
 ACTIONS: 
@@ -92,6 +92,101 @@ GOAL STATES:
 
 ACTION COST: 
 - 1.
+
+# 3.
+## 1. 
+### a. 
+STATES: 
+For a specific size of the maze: 
+- Position and facing of the agent. 
+- Position of walls. 
+
+INITIAL STATE: 
+- Any. 
+
+ACTIONS: 
+- Turn. 
+- Move forward a certain distance. 
+- Can move through a wall. 
+
+TRANSITION MODEL: 
+- Map a combination of positions of the agent & walls and one of the actions to resulting a new state. 
+
+GOAL STATES: 
+- The agent out of a maze. 
+
+ACTION COST: 
+- 1.
+
+### b.
+Size of state space: nxm maze, w walls, 1 agent.
+(nxm C w) * (nxm - w).
+
+## 2. 
+### a. 
+STATES: 
+For a specific size of the maze: 
+- Position and orientation of the agent. 
+- Position of corridor intersection.
+
+INITIAL STATE: 
+- Any. 
+
+ACTIONS: 
+- Turn. 
+- Move forward to a corridor intersection. 
+
+TRANSITION MODEL: 
+- Map a combination of positions of the agent & corridor intersection and one of the actions to resulting a new state. 
+
+GOAL STATES: 
+- The agent out of a maze. 
+
+ACTION COST: 
+- 1.
+
+### b.
+Assume all corridor intersections are crossroads (4 directions), nxm maze, c corridor intersections, w walls, 1 agent.
+(nxm C c) * (nxm - w). 
+
+## 3. 
+### a. 
+STATES: 
+For a specific size of the maze: 
+- Position of the agent. 
+- Position of turning points. 
+
+INITIAL STATE: 
+- Any. 
+
+ACTIONS: 
+- Move on one of the 4 directions until reach a turning point. 
+
+TRANSITION MODEL: 
+- Map a combination of positions of the agent & turning points and moving to resulting a new combination. 
+
+GOAL STATES: 
+- The agent out of a maze. 
+
+ACTION COST: 
+- 1.
+
+### b. 
+Don't need to track agent's orientation. 
+
+## 4. 
+- Robot is out of energy. 
+- Robot is stuck. 
+- Robot is destroyed by some villain.
+
+
+
+
+
+
+
+
+
 
 
 
