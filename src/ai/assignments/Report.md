@@ -263,6 +263,53 @@ ACTION COST:
 ## 5. 
 (?)
 
+# 5.
+## 1. 
+> Goal formulatio is "Goal state". 
+
+STATES: 
+- Position of 2 agents (friends).
+
+INITIAL STATE: 
+- 2 agents are in their ogriginal positions. 
+
+ACTIONS: 
+- One of 2 agents move in turn to another position.
+
+TRANSITION MODEL: 
+- Map a state and an action to resulting a new state. 
+
+GOAL STATES: 
+- 2 agents at the same position. 
+
+ACTION COST: 
+- 1.
+
+## 2. 
+- (i) & (iii) is admissible. But should select (i). 
+
+## 3. 
+- No.
+
+## 4. 
+- No. Because visit the same node more than once doesn't change anything. Only a "bad" algorithm leads to that behavior. 
+
+# 6. 
+- [References](https://cpentalk.com/502/puzzle-states-divided-disjoint-reachable-while-reachable).
+
+## 1. Procedure: 
+Compute N (N denote the sum of the total number of inversions and the row number of the empty square) of the given state S. 
+if N is even then S belongs to the set which can't reach the goal state. 
+else N belongs to the set can reach the goal state. 
+
+## 2.
+(?)
+
+
+
+
+
+
 
 
 
