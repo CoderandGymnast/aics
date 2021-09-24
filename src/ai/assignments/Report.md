@@ -305,7 +305,69 @@ else N belongs to the set can reach the goal state.
 ## 2.
 (?)
 
+# 7 (*)
 
+# 8.
+## 1. 
+- STATES: 
+ - All combination of colors for all regions on the planar map. 
+- INITIAL STATE: 
+ - Any.
+- ACTIONS: 
+ - Color a region.
+- TRANSITION MODEL: 
+ - Map a state and an action to resulting a new state. 
+- GOAL STATES: 
+ - No two adjacent regions have the same color. 
+- ACTION COST: 
+ - 1. 
+
+## 2. 
+- STATES: 
+ - All combinations of position the stacked crates.
+- INITIAL STATE: 
+ - Any. 
+- ACTIONS: 
+ - Move the stack to a specific position. 
+- TRANSITION MODEL: 
+ - Map a state and an action to resulting a new state. 
+- GOAL STATES: 
+ - The stack is at the position where the monkey can get the bananas. 
+- ACTION COST: 
+ - Moving distance. 
+
+## 3. 
+- STATES: 
+ - Total number of records. 
+ - Records have been discovered. 
+ - Records are illegal. 
+- INITIAL STATE: 
+ - No records have been discovered. 
+- ACTIONS: 
+ - Discover one record. 
+- TRANSITION MODEL: 
+ - Map a state and an action to resulting a new state. 
+- GOAL STATES: 
+ - All records have been discovered. 
+- ACTION COST: 
+ - 1
+
+## 4. 
+- STATES: 
+ - Water gallons on each of 3 jugs. 
+- INITIAL STATES: 
+ - All jugs are empty. 
+- ACTIONS: 
+ - Fill a jug up.
+ - Empty a jug out from one to another. 
+ - Empty a jug onto the ground. 
+- TRANSITION MODEL: 
+ - Map a state and an action to resulting a new state. 
+GOAL STATES: 
+ - At least one jug contains exactly one gallon. 
+ 
+
+ 
 
 
 
